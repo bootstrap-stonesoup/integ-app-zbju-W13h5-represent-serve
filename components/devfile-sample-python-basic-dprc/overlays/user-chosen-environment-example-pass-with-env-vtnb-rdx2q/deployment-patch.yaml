@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-python-basic-dprc
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/bootstrap/integration-e2e-tenant/integ-app-zbju/devfile-sample-python-basic-dprc@sha256:d40fb338f77130f6b253835238900c572fa4863ae121873cdafccc31b7d20833
+        name: my-python
+        resources: {}
+status: {}
